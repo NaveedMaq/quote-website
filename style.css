@@ -3,13 +3,13 @@
 /* DAY MODE --default */
 :root {
   --color: #111;
-  --color-bg: #eee;
+  --color-bg: #fff;
   --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* NIGHT MODE */
 /* :root {
-  --color: #eee;
+  --color: #fff;
   --color-bg: #111;
   --color-shadow: rgba(255, 255, 255, 0.1);
 } */

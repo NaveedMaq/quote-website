@@ -1,9 +1,11 @@
 // DOM ELEMENTS
 const btnDarkMode = document.querySelector('.btn--dark-mode');
 
-// STATE
+// TOGGLE STATE
 const toggleMode = (function () {
+  // PRIVATE STATE
   let currentMode = 'light';
+
   function switchToDarkMode() {
     document.documentElement.style.setProperty('--color', '#eee');
     document.documentElement.style.setProperty('--color-bg', '#111');
@@ -36,9 +38,13 @@ const toggleMode = (function () {
   return toggleMode;
 })();
 
-btnDarkMode.addEventListener('click', function () {
-  const updatedMode = toggleMode();
-  const newIconName =
-    updatedMode === 'light' ? 'sunny-outline' : 'moon-outline';
-  this.querySelector('ion-icon').setAttribute('name', newIconName);
-});
+function init() {
+  btnDarkMode.addEventListener('click', function () {
+    const updatedMode = toggleMode();
+    const newIconName =
+      updatedMode === 'light' ? 'sunny-outline' : 'moon-outline';
+    this.querySelector('ion-icon').setAttribute('name', newIconName);
+  });
+}
+
+init();
